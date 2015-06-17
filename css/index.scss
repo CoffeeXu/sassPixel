@@ -1,0 +1,141 @@
+// Variables
+$pixel-size: 10px;
+
+// Colors
+$__: null;
+$bk: #000;
+$yl: #ff0;
+$dy: #d9e81b;
+$rd: #ff4200;
+$pk: #feb6aa;
+$pf: #fcd1a4;
+$gy: #b6c3cc;
+$fl: #fd80c4;
+$bl: #4776f8;
+$wt: #fff;
+
+
+// Frames - zoom out in your browser until you can see the full picture in the source code for easy editing
+$frames:
+  (
+    $__ $__ $__ $__ $__ $__ $__ $bk $bk $bk $bk $bk $bk $bk $__ $__ $__ $__ $__ $__ $__ $__,
+    $__ $__ $__ $__ $__ $__ $bk $dy $yl $yl $yl $yl $yl $dy $bk $__ $__ $__ $__ $__ $__ $__,
+    $__ $__ $__ $__ $__ $bk $dy $yl $yl $yl $yl $yl $yl $yl $dy $bk $__ $__ $__ $__ $__ $__,
+    $__ $__ $__ $__ $__ $bk $yl $yl $yl $rd $rd $rd $yl $yl $yl $bk $__ $__ $__ $__ $__ $__,
+    $__ $__ $__ $__ $bk $yl $rd $rd $rd $yl $yl $yl $rd $rd $rd $yl $bk $__ $__ $__ $__ $__,
+    $__ $__ $__ $__ $bk $rd $yl $yl $yl $bk $bk $bk $yl $yl $yl $rd $bk $__ $__ $__ $__ $__,
+    $__ $__ $bk $bk $yl $yl $bk $bk $bk $bk $bk $bk $bk $bk $bk $yl $yl $bk $bk $__ $__ $__,
+    $__ $bk $yl $yl $bk $bk $bk $bk $pk $bk $pk $bk $pk $bk $bk $bk $bk $yl $yl $bk $__ $__,
+    $__ $__ $bk $dy $dy $bk $bk $pk $bk $pk $pk $pk $bk $pk $bk $bk $dy $dy $bk $__ $__ $__,
+    $__ $__ $__ $bk $bk $bk $pk $pf $bk $pf $pf $pf $bk $pf $pk $bk $bk $bk $__ $__ $__ $__,
+    $__ $__ $__ $__ $__ $bk $pk $pf $gy $pf $pf $pf $gy $pf $pk $bk $__ $__ $__ $__ $__ $__,
+    $__ $__ $__ $__ $__ $__ $bk $pf $fl $pf $pf $pf $fl $pf $bk $__ $__ $__ $__ $__ $__ $__,
+    $__ $__ $__ $__ $__ $__ $__ $bk $bk $bk $bk $bk $bk $bk $__ $__ $__ $__ $__ $__ $__ $__,
+    $__ $__ $__ $__ $__ $__ $__ $__ $bk $rd $pf $rd $bk $__ $__ $__ $__ $__ $__ $__ $__ $__,
+    $__ $__ $__ $__ $__ $__ $__ $bk $rd $rd $pf $rd $rd $bk $__ $__ $__ $__ $__ $__ $__ $__,
+    $__ $__ $__ $__ $__ $__ $bk $pf $rd $rd $pf $rd $rd $pf $bk $__ $__ $__ $__ $__ $__ $__,
+    $__ $__ $__ $__ $__ $bk $pf $bk $bk $bl $bl $bl $bk $bk $pf $bk $__ $__ $__ $__ $__ $__,
+    $__ $__ $__ $__ $__ $__ $bk $__ $bk $bl $bl $bl $bk $__ $bk $__ $__ $__ $__ $__ $__ $__,
+    $__ $__ $__ $__ $__ $__ $__ $__ $bk $wt $bk $wt $bk $__ $__ $__ $__ $__ $__ $__ $__ $__,
+    $__ $__ $__ $__ $__ $__ $__ $__ $bk $pf $bk $pf $bk $__ $__ $__ $__ $__ $__ $__ $__ $__,
+    $__ $__ $__ $__ $__ $__ $__ $__ $__ $bk $__ $bk $__ $__ $__ $__ $__ $__ $__ $__ $__ $__
+  ),
+  (
+    $__ $__ $__ $__ $__ $__ $__ $bk $bk $bk $bk $bk $bk $bk $__ $__ $__ $__ $__ $__ $__ $__,
+    $__ $__ $__ $__ $__ $__ $bk $dy $yl $yl $yl $yl $yl $dy $bk $__ $__ $__ $__ $__ $__ $__,
+    $__ $__ $__ $__ $__ $bk $dy $yl $yl $yl $yl $yl $yl $yl $dy $bk $__ $__ $__ $__ $__ $__,
+    $__ $__ $__ $__ $__ $bk $yl $yl $yl $rd $rd $rd $yl $yl $yl $bk $__ $__ $__ $__ $__ $__,
+    $__ $__ $__ $__ $bk $yl $rd $rd $rd $yl $yl $yl $rd $rd $rd $yl $bk $__ $__ $__ $__ $__,
+    $__ $__ $__ $__ $bk $rd $yl $yl $yl $bk $bk $bk $yl $yl $yl $rd $bk $__ $__ $__ $__ $__,
+    $__ $__ $bk $bk $yl $yl $bk $bk $bk $bk $bk $bk $bk $bk $bk $yl $yl $bk $bk $__ $__ $__,
+    $__ $bk $yl $yl $bk $bk $bk $bk $pk $bk $pk $bk $pk $bk $bk $bk $bk $yl $yl $bk $__ $__,
+    $__ $__ $bk $dy $dy $bk $bk $pk $bk $pk $pk $pk $bk $pk $bk $bk $dy $dy $bk $__ $__ $__,
+    $__ $__ $__ $bk $bk $bk $pk $pf $bk $pf $pf $pf $bk $pf $pk $bk $bk $bk $__ $__ $__ $__,
+    $__ $__ $__ $__ $__ $bk $pk $pf $gy $pf $pf $pf $gy $pf $pk $bk $__ $__ $__ $__ $__ $__,
+    $__ $__ $__ $__ $__ $__ $bk $pf $fl $pf $pf $pf $fl $pf $bk $__ $__ $__ $__ $__ $__ $__,
+    $__ $__ $__ $__ $__ $__ $__ $bk $bk $bk $bk $bk $bk $bk $__ $__ $__ $__ $__ $__ $__ $__,
+    $__ $__ $__ $__ $__ $__ $bk $__ $bk $rd $pf $rd $bk $__ $bk $__ $__ $__ $__ $__ $__ $__,
+    $__ $__ $__ $__ $__ $bk $pf $bk $rd $rd $pf $rd $rd $bk $pf $bk $__ $__ $__ $__ $__ $__,
+    $__ $__ $__ $__ $__ $__ $bk $pf $rd $rd $pf $rd $rd $pf $bk $__ $__ $__ $__ $__ $__ $__,
+    $__ $__ $__ $__ $__ $__ $__ $bk $bk $bl $bl $bl $bk $bk $__ $__ $__ $__ $__ $__ $__ $__,
+    $__ $__ $__ $__ $__ $__ $__ $__ $bk $bl $bl $bl $bk $__ $__ $__ $__ $__ $__ $__ $__ $__,
+    $__ $__ $__ $__ $__ $__ $__ $__ $bk $wt $bk $wt $bk $__ $__ $__ $__ $__ $__ $__ $__ $__,
+    $__ $__ $__ $__ $__ $__ $__ $__ $bk $pf $bk $pf $bk $__ $__ $__ $__ $__ $__ $__ $__ $__,
+    $__ $__ $__ $__ $__ $__ $__ $__ $__ $bk $__ $bk $__ $__ $__ $__ $__ $__ $__ $__ $__ $__
+  );
+
+
+@function frame-to-box-shadows($frame) {
+  $shadows: (); // empty list
+  @for $y from 1 through length($frame) {
+    $row: nth($frame, $y);
+    @for $x from 1 through length($row) {
+      $color: nth($row, $x);
+      @if $color != null {
+        $shadow: ($x * $pixel-size) ($y * $pixel-size) $color;
+        $shadows: append($shadows, $shadow, comma);
+      }
+    }
+  }
+  @return $shadows;
+}
+
+.lufei {
+  animation: pbjtime 0.8s steps(1, start) infinite;
+  width: $pixel-size;
+  height: $pixel-size;
+  position: relative;
+  box-shadow: frame-to-box-shadows(nth($frames, 1));
+}
+
+@keyframes pbjtime {
+  $frame-count: length($frames);
+  @for $i from 1 through $frame-count {
+    #{100% / $frame-count * $i} {
+      box-shadow: frame-to-box-shadows(nth($frames, $i));
+    }
+  }
+}
+
+body {
+  font-family: Helvetica Neue, Helvetica, Tahoma, sans-serif;
+  background: #f5f5f7;
+  height: 99em;
+}
+#container {
+  width: 900px;
+  margin: 0px auto;
+  text-align: center;
+}
+#viewer {
+  position: relative;
+  width: 500px;
+  height: 240px;
+  border: 4px dashed #ccc;
+  border-radius: 10px;
+  vertical-align: baseline;
+  text-align: center;
+  text-shadow: 1px 1px 0 #fff;
+  margin:10px auto;
+}
+#viewer.dragover {
+  border: 5px dashed #555;
+}
+#droparea-text {
+  z-index: 0;
+  margin-top: 100px;
+  font-size: 20px;
+  font-weight: bold;
+  color: #555;
+}
+#preview {
+  z-index: 1;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+#pixelimg {
+  width: $pixel-size;
+  height: $pixel-size;
+  position: relative;
+}
